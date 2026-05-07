@@ -1,7 +1,7 @@
 <!-- logo: https://simpleicons.org/ badge params: https://shields.io/ -->
 
 <p align="center">
-  <img width="760" src="./pic/logo-terminal.svg" alt="JACK CC Protocol Lab Logo" />
+  <img width="760" src="./pic/logo-ascii-scan.svg" alt="JACK CC Scanline Logo" />
 </p>
 
 <p align="center">

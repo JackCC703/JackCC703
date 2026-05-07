@@ -1,0 +1,35 @@
+<svg width="760" height="150" viewBox="0 0 760 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Jack CC scanline logo</title>
+  <desc id="desc">A terminal-style ASCII logo with animated scanline gradient for Jack CC.</desc>
+  <defs>
+    <linearGradient id="scanline" x1="-100%" y1="0" x2="0%" y2="0">
+      <stop stop-color="#242424" offset="0%"/>
+      <stop stop-color="#39ff14" offset="38%"/>
+      <stop stop-color="#ffffff" offset="50%"/>
+      <stop stop-color="#00e5ff" offset="62%"/>
+      <stop stop-color="#242424" offset="100%"/>
+      <animate attributeName="x1" from="-100%" to="100%" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="x2" from="0%" to="200%" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="softGlow" x="-8%" y="-20%" width="116%" height="150%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.18 0 0 0 0 1 0 0 0 0 0.55 0 0 0 0.8 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="760" height="150" rx="10" fill="#05070a"/>
+  <text x="174" y="28" font-family="'Courier New', monospace" font-size="18" font-weight="700" fill="url(#scanline)" filter="url(#softGlow)" xml:space="preserve">
+    <tspan x="174" y="28">█████  ███   ████ ██  ██   ████   ████</tspan>
+    <tspan x="174" y="50">  ██  ██ ██ ██    ██ ██   ██     ██    </tspan>
+    <tspan x="174" y="72">  ██  █████ ██    ████    ██     ██    </tspan>
+    <tspan x="174" y="94">  ██  ██ ██ ██    ██ ██   ██     ██    </tspan>
+    <tspan x="174" y="116">███   ██ ██  ████ ██  ██   ████   ████</tspan>
+  </text>
+  <text x="380" y="137" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#7dfcff" letter-spacing="3">
+    PROTOCOL TOOLING // CLIENT DX // EPF STUDY
+  </text>
+</svg>
