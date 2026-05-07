@@ -21,7 +21,6 @@
     </filter>
   </defs>
 
-  <rect width="760" height="150" rx="10" fill="#05070a"/>
   <text x="174" y="28" font-family="'Courier New', monospace" font-size="18" font-weight="700" fill="url(#scanline)" filter="url(#softGlow)" xml:space="preserve">
     <tspan x="174" y="28">█████  ███   ████ ██  ██   ████   ████</tspan>
     <tspan x="174" y="50">  ██  ██ ██ ██    ██ ██   ██     ██    </tspan>
