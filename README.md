@@ -32,20 +32,16 @@
 
 ### `System Identity`
 
-```txt
-jack@protocol-lab:~$ whoami
-Jack CC / Chen Can
-Graduate student in Electronic Information.
-Focus: Ethereum protocol tooling + product-grade engineering.
+**Jack CC / Chen Can**<br/>
+Graduate student in Electronic Information. Focused on Ethereum protocol tooling and product-grade engineering.
 
-jack@protocol-lab:~$ current_focus
-execution-specs    fork-aware tests, t8n helpers, fixtures
-consensus-specs    reusable context helpers, state tests
-lodestar           validator CLI UX, TypeScript tooling
+| Current Focus | Work |
+| :--- | :--- |
+| `execution-specs` | fork-aware tests, t8n helpers, fixtures |
+| `consensus-specs` | reusable context helpers, state tests |
+| `lodestar` | validator CLI UX, TypeScript tooling |
 
-jack@protocol-lab:~$ engineering_style
-read code -> isolate behavior -> ship small PRs -> test
-```
+**Engineering style:** read code -> isolate behavior -> ship small PRs -> test
 
 ---
 
@@ -107,11 +103,11 @@ read code -> isolate behavior -> ship small PRs -> test
 
 ### `Runtime`
 
-```txt
-interests  = Ethereum core protocol / spec tooling / client DX
-principles = read code / measure behavior / ship small PRs / test
-milestone  = become useful to Ethereum core protocol maintainers
-```
+| Field | Value |
+| :--- | :--- |
+| Interests | Ethereum core protocol / spec tooling / client DX |
+| Principles | read code / measure behavior / ship small PRs / test |
+| Milestone | become useful to Ethereum core protocol maintainers |
 
 ---
 
