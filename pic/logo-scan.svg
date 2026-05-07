@@ -53,8 +53,8 @@
     <text x="480" y="178" text-anchor="middle" class="mono" font-size="20" font-weight="700" fill="#B8F7FF" letter-spacing="4">PROTOCOL LAB // EPF STUDY</text>
   </g>
 
-  <text x="128" y="218" class="mono" font-size="13" fill="#39FF14" opacity="0.9">boot://ethereum/spec-tooling/client-dx</text>
-  <text x="678" y="218" class="mono" font-size="13" fill="#00E5FF" opacity="0.9">status: shipping-small-prs</text>
+  <text x="128" y="218" class="mono" font-size="13" fill="#39FF14" opacity="0.9">boot://ethereum/spec-tooling</text>
+  <text x="682" y="218" class="mono" font-size="13" fill="#00E5FF" opacity="0.9">status: shipping PRs</text>
 
   <rect x="102" y="72" width="756" height="3" fill="#39FF14" opacity="0.2" class="scanline"/>
   <rect x="114" y="63" width="732" height="154" rx="8" stroke="#FFFFFF" stroke-opacity="0.08"/>
