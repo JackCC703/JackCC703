@@ -68,8 +68,6 @@ Engineering style: read code -> isolate behavior -> ship small PRs -> test
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
 </p>
 
-Protocol tooling / Web3 engineering / product-grade TypeScript / AI-assisted developer workflows.
-
 ---
 
 ### `Contact`
