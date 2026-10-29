@@ -2,103 +2,56 @@
   <img width="760" src="./pic/logo-ascii-scan.svg" alt="JACK CC Scanline Logo" />
 </p>
 
-<p align="center">
-  <a href="#current-focus">
-    <img src="https://img.shields.io/badge/EPF7-Fellow-6F42C1?style=for-the-badge&logo=ethereum&logoColor=white" alt="EPF7 Fellow" />
-  </a>
-  &nbsp;
-  <a href="#selected-protocol-contributions">
-    <img src="https://img.shields.io/badge/Ethereum-Protocol-111111?style=for-the-badge&logo=ethereum&logoColor=white" alt="Ethereum Protocol" />
-  </a>
-  &nbsp;
-  <a href="#open-to-opportunities">
-    <img src="https://img.shields.io/badge/Open_to-Opportunities-0969DA?style=for-the-badge" alt="Open to Opportunities" />
-  </a>
-</p>
+# Hi, I'm Jack CC
 
----
+**Ethereum Protocol Fellowship · Cohort 7 | Erigon contributor | M.Eng. student**
 
-> EPF7 Fellow contributing to Erigon on Progressive SSZ and EIP-7807. I work on Ethereum execution-layer tooling through small, testable, and reviewable changes.
+I build and test Ethereum client software in Go. During EPF7, I contributed progressive SSZ primitives to Erigon and built an experimental EIP-7807 payload adapter with field proofs. My current focus is SSZ correctness and conformance testing.
 
-### `About Me`
+**[EPF7 project & technical walkthrough](projects/epf7-erigon-ssz.md)** · **[Run the proof demo](https://github.com/JackCC703/erigon/tree/eip7807-demo/dev/eip7807demo)** · **[Email](mailto:chencan0703@gmail.com)**
 
-**Jack CC**  
-EPF7 Fellow · Ethereum Protocol Contributor · Graduate Student in Electronic Information
+## Selected upstream contributions
 
-I am working toward becoming an Ethereum execution client engineer. My current work focuses on Erigon, SSZ execution blocks, progressive Merkleization, and the protocol changes needed to represent execution-layer data with SSZ.
+### Erigon · Go, SSZ, Merkle trees
 
-My engineering loop: `read the specification → trace the codebase → isolate behavior → implement a small change → test → review`
+| Contribution | Result | Status |
+| --- | --- | --- |
+| [#25265](https://github.com/erigontech/erigon/pull/25265) · SSZ Merkle tree depth | Fixed incorrect roots and element-proof failures for non-power-of-two limits; added regression tests | Merged |
+| [#22446](https://github.com/erigontech/erigon/pull/22446) · Progressive Merkleization | Implemented the EIP-7916 tree primitive with reference-vector tests | Merged |
+| [#22689](https://github.com/erigontech/erigon/pull/22689) · Progressive list root | Combined progressive Merkleization with the logical element-count mix-in | Merged |
+| [#22783](https://github.com/erigontech/erigon/pull/22783) · Progressive byte list root | Added byte packing and root computation with boundary-case reference vectors | Merged |
 
----
+Current work: [#25361](https://github.com/erigontech/erigon/pull/25361) adds rejection of over-full lists and handles empty flat-leaf input. **Open; not merged.**
 
-### `Current Focus`
+### Ethereum execution-specs · Python, protocol tooling
 
-#### Pureth: SSZ Execution Blocks in Erigon
+- [#2738](https://github.com/ethereum/execution-specs/pull/2738) — avoided unnecessary fork-template clones in `ForkCache`, with regression tests. **Merged.**
+- [#2778](https://github.com/ethereum/execution-specs/pull/2778) — centralized fork lookup and module loading through the `Hardfork` abstraction. **Merged.**
+- [#3053](https://github.com/ethereum/execution-specs/pull/3053) — registered the JSON fixture fork marker to remove pytest warnings. **Merged.**
 
-My [EPF7 project](https://hackmd.io/@jackcc/epf7-project-proposal) explores the Erigon-side foundations for [EIP-7807](https://eips.ethereum.org/EIPS/eip-7807):
+## EPF7 project: SSZ execution blocks in Erigon
 
-- mapping existing Erigon execution-block data into an SSZ representation;
-- building on [EIP-7916](https://eips.ethereum.org/EIPS/eip-7916) ProgressiveList and [EIP-7495](https://eips.ethereum.org/EIPS/eip-7495) ProgressiveContainer primitives;
-- computing progressive SSZ roots;
-- exploring generalized indices, Merkle proofs, and a small experimental debug RPC.
+Built a pipeline from Erigon block data to an 18-field EIP-7807 payload, its SSZ root, and proofs for individual fields.
 
-Project proposal: [`eth-protocol-fellows/cohort-seven#202`](https://github.com/eth-protocol-fellows/cohort-seven/pull/202)
+- **Adapter:** maps block data, receipts, and additional inputs to the proposed payload layout. [#23854](https://github.com/erigontech/erigon/pull/23854) was **closed without merging**; the implementation remains experimental on my fork.
+- **Proof demo:** reports all 18 generalized indices and generates field proofs. A Python implementation using `remerkleable` independently rebuilds the fixture and checks the payload root, positions, and reported proof branches.
+- **Reproduction:** a local script runs the Go demo tests and Python cross-check. No running Ethereum node is required; initial setup downloads dependencies.
 
----
+The cross-check covers a deterministic fixture. Broader historical-block coverage remains future work.
 
-### `Selected Protocol Contributions`
+**[Read the project walkthrough →](projects/epf7-erigon-ssz.md)**
 
-- [`erigontech/erigon#22446`](https://github.com/erigontech/erigon/pull/22446) — implemented EIP-7916 progressive Merkleization in Erigon's Merkle-tree utilities. **Merged.**
-- [`erigontech/erigon#22528`](https://github.com/erigontech/erigon/pull/22528) — added the EIP-7495 `active_fields` mix-in used by ProgressiveContainer designs.
-- [`ethereum/execution-specs#3053`](https://github.com/ethereum/execution-specs/pull/3053) — fixed JSON fixture fork-marker registration in the execution-spec test tooling. **Merged.**
-- [`ethereum/execution-specs#2778`](https://github.com/ethereum/execution-specs/pull/2778) — moved fork module loading toward the `Hardfork` abstraction after maintainer review. **Merged.**
-- [`ethereum/execution-specs#2738`](https://github.com/ethereum/execution-specs/pull/2738) — optimized `ForkCache` to avoid cloning unchanged fork templates. **Merged.**
+## What I'm working toward
 
----
+Continuing Erigon contributions while developing deeper Go, testing, and distributed-systems skills. I am interested in internships and contributor opportunities in Ethereum clients, blockchain infrastructure, protocol testing, and Go backend development.
 
-### `Open to Opportunities`
+**Based in China (UTC+8).** Contact: [chencan0703@gmail.com](mailto:chencan0703@gmail.com).
 
-I am open to:
+## Other work
 
-- Ethereum client and protocol engineering internships;
-- part-time contributor or contract work;
-- protocol testing and developer-infrastructure roles;
-- Go backend and distributed-systems opportunities;
-- technical collaborations around Ethereum, SSZ, and execution-layer tooling.
+- [upgrading-ethereum-zh](https://github.com/JackCC703/upgrading-ethereum-zh) — independent Chinese translation of *Upgrading Ethereum*.
+- [github-ai-helper](https://github.com/JackCC703/github-ai-helper) — tooling for collecting GitHub PR context and generating PR descriptions.
 
-I am still early in my protocol-engineering journey, but I can share concrete upstream contributions and I am comfortable learning through specifications, large codebases, testing, and code review.
+Primary tools: **Go · Python · Git · Linux · Docker**. Also working with TypeScript and learning Rust.
 
----
-
-### `Other Work`
-
-- [`upgrading-ethereum-zh`](https://github.com/JackCC703/upgrading-ethereum-zh) — an independent Chinese translation of *Upgrading Ethereum*, including Consensus chapters and rendered PDF releases.
-- [`github-ai-helper`](https://github.com/JackCC703/github-ai-helper) — an AI-assisted tool for collecting PR context, reading diffs, and supporting code-review workflows.
-- `Web3CareerBuild` — product engineering work with React, Next.js, and TypeScript.
-
----
-
-### `Working With`
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go" />
-  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-</p>
-
----
-
-### `Contact`
-
-<p align="center">
-  <a href="https://github.com/JackCC703">
-    <img src="https://img.shields.io/badge/GitHub-JackCC703-0d1117?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  &nbsp;
-  <a href="mailto:chencan0703@gmail.com">
-    <img src="https://img.shields.io/badge/Email-chencan0703%40gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" />
-  </a>
-</p>
+<sub>Contribution statuses checked on 2026-10-29. Follow the linked PRs for updates.</sub>
